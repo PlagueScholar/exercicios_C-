@@ -21,12 +21,15 @@ namespace ExercicioListas
 
         public void updateSalario(double prcnt){
             if (prcnt <= 0) {
-                Console.WriteLine("Insira um valor maior que 0");
+                Console.WriteLine("Insira um valor maior ou menor que 0");
             }
-            else{
+            else if (prcnt < 0) {
+                Salario -= Salario * (prcnt / 100);
+            }
+            else if(prcnt >0){
                 Salario += Salario * (prcnt / 100);
             }
-
+                
 
         }
 
